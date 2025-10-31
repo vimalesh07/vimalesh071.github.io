@@ -195,6 +195,24 @@
             box-shadow: 0 10px 40px rgba(139,0,0,0.6);
         }
 
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(139,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .story-card:hover::before {
+            opacity: 1;
+        }
+
         .story-image {
             width: 100%;
             height: 220px;
@@ -316,9 +334,32 @@
 
         .modal-story {
             font-size: 1.1rem;
-            line-height: 1.8;
+            line-height: 2;
             color: var(--bone-white);
             margin-bottom: 30px;
+            white-space: pre-line;
+            text-align: justify;
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+
+        .modal-story::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-story::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.3);
+            border-radius: 4px;
+        }
+
+        .modal-story::-webkit-scrollbar-thumb {
+            background: var(--blood-red);
+            border-radius: 4px;
+        }
+
+        .modal-story::-webkit-scrollbar-thumb:hover {
+            background: #ff0000;
         }
 
         .modal-controls {
@@ -790,7 +831,7 @@
     </footer>
 
     <audio id="bgMusic" loop>
-        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj" type="audio/wav">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_d1718ab41b.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -804,20 +845,59 @@
             {
                 title: "The Midnight Visitor",
                 image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&h=220&fit=crop",
+                video: "https://cdn.coverr.co/videos/coverr-dark-hallway-with-flickering-lights-2589/1080p.mp4",
                 preview: "Every night at 3:33 AM, something knocks on my door. I live on the 14th floor...",
-                story: `Every night at exactly 3:33 AM, I'm awakened by three deliberate knocks on my apartment door. The sound is always the same - measured, patient, almost polite. The first time it happened, I thought it was a neighbor. I looked through the peephole and saw nothing. The hallway was empty, illuminated only by the flickering fluorescent lights. The second night, I opened the door. Still nothing. Just the empty corridor stretching into darkness on both sides. By the third night, I decided to ignore it. But the knocking persisted. Three knocks. Always three. Always at 3:33 AM. Last night, I finally worked up the courage to check the peephole again. This time, I saw something. A figure stood there, perfectly still, facing the door. But it was impossible. I live on the 14th floor, and this figure was seven feet tall. Its head nearly touched the ceiling. As I watched, it slowly raised its hand and knocked three times. Then it turned its head toward the peephole. In that moment, I saw its face - or rather, where its face should have been. There was nothing but darkness, an empty void that seemed to pull at my soul. Tonight is the fourth night. It's 3:32 AM as I write this. I can hear footsteps in the hallway outside. They're getting closer.`,
+                story: `Every night at exactly 3:33 AM, I'm awakened by three deliberate knocks on my apartment door. The sound is always the same - measured, patient, almost polite. Like someone who has all the time in the world to wait.
+
+The first time it happened was three weeks ago. I thought it was a neighbor. Maybe someone locked out, needing help. I looked through the peephole and saw nothing. The hallway was empty, illuminated only by the flickering fluorescent lights that always buzzed too loudly in the silence of night.
+
+The second night, I made a mistake. I opened the door. I don't know what possessed me to do it - maybe I was still half-asleep, maybe I wanted to confront whoever was playing this sick joke. But when I pulled the door open, there was nothing. Just the empty corridor stretching into darkness on both sides, the emergency exit signs casting their blood-red glow on the walls.
+
+By the third night, I decided to ignore it. But the knocking persisted. Three knocks. Always three. Always at 3:33 AM. I pressed my pillow over my head, tried to drown it out, but I could still hear it. Knock. Knock. Knock. Each one echoing through my apartment like a heartbeat.
+
+I started researching. Old legends, folklore, anything that could explain the pattern. Three knocks. The number three appears in countless dark rituals. The mocking of the trinity. The Devil's calling card. But surely that was just superstition. This was the 21st century. Things like that didn't happen anymore.
+
+Last night, I finally worked up the courage to check the peephole again. I had installed a security camera in the hallway the day before, hoping to catch whatever or whoever was doing this. I crept to the door, my heart pounding so hard I thought it might wake my neighbors. Through the peephole, I saw something that made my blood run cold.
+
+A figure stood there, perfectly still, facing the door. But it was impossible. I live on the 14th floor, and this figure was seven feet tall. Its head nearly touched the ceiling. As I watched, frozen in terror, it slowly raised its hand - if you could call it a hand. The fingers were too long, each joint bending at wrong angles. And it knocked three times. Deliberately. Patiently.
+
+Then it turned its head toward the peephole. The movement was wrong, too smooth, like a mannequin being rotated by invisible hands. In that moment, I saw its face - or rather, where its face should have been. There was nothing but darkness, an empty void that seemed to pull at my soul. Not shadow, not absence of light, but something else. A hole in reality itself.
+
+I stumbled backward, my breath catching in my throat. When I looked at the security camera feed on my phone, the hallway was empty. Had been empty all along. But I know what I saw through that peephole.
+
+Tonight is the fourth night. It's 3:32 AM as I write this. One minute until it comes. I can already hear footsteps in the hallway outside. Slow, deliberate footsteps that stop right outside my door. I hear breathing now. Deep, raspy breathing that sounds like it's coming from something that shouldn't have lungs.
+
+The doorknob is turning. Slowly. Testing. I never locked it after last night. I don't know why. Some part of me knew that locks wouldn't matter. Whatever this thing is, it's been patient. It's been waiting. And tonight, I think its patience has run out.
+
+The door is opening now. I can see the darkness from the hallway spilling into my apartment like liquid shadow. And in that darkness, I see the outline of something tall. Something that shouldn't exist. It's inside now.
+
+The last thing I notice before my pen falls from my shaking hand is that it's exactly 3:33 AM. The knocking has stopped. It doesn't need to knock anymore.`,
                 tag: "👁️ Paranormal"
             },
             {
                 title: "The Last Photograph",
                 image: "https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?w=400&h=220&fit=crop",
+                video: "https://cdn.coverr.co/videos/coverr-old-camera-on-wooden-table-4892/1080p.mp4",
                 preview: "I found an old camera. The photos it takes show things that haven't happened yet...",
-                story: `While cleaning my grandmother's attic, I discovered an ancient Polaroid camera in a dusty wooden box. Curious, I loaded it with film I found stored alongside it and took a test photo of the attic window. The picture developed slowly. But what appeared wasn't the attic window I had photographed. It showed me, standing in my kitchen, holding the very photograph I was looking at now. In the background, I could see a figure standing in my hallway, watching me. I laughed it off as a weird double exposure. But when I went downstairs to my kitchen, everything was exactly as shown in the photograph. The clock showed the same time. My coffee mug sat in the same spot. And in the hallway reflection of the microwave, I could see the shadow of something standing behind me. I've taken more photographs since then. Each one shows a moment a few hours in my future. Yesterday's photo showed me sleeping in bed. Standing over me was that same dark figure, its hand reaching toward my face. Tonight's photograph just developed. It shows my bedroom, empty. The bed is made, and there's a newspaper on the nightstand. The headline reads: "Local Man Found Dead in Mysterious Circumstances." The date on the newspaper is tomorrow.`,
+                story: `While cleaning my grandmother's attic, I discovered an ancient Polaroid camera in a dusty wooden box. Curious, I loaded it with film I found stored alongside it and took a test photo of the attic window.
+
+The picture developed slowly. But what appeared wasn't the attic window I had photographed. It showed me, standing in my kitchen, holding the very photograph I was looking at now. In the background, I could see a figure standing in my hallway, watching me.
+
+I laughed it off as a weird double exposure. But when I went downstairs to my kitchen, everything was exactly as shown in the photograph. The clock showed the same time. My coffee mug sat in the same spot.
+
+And in the hallway reflection of the microwave, I could see the shadow of something standing behind me.
+
+I've taken more photographs since then. Each one shows a moment a few hours in my future. Yesterday's photo showed me sleeping in bed. Standing over me was that same dark figure, its hand reaching toward my face.
+
+Tonight's photograph just developed. It shows my bedroom, empty. The bed is made, and there's a newspaper on the nightstand. The headline reads: "Local Man Found Dead in Mysterious Circumstances." The date on the newspaper is tomorrow.
+
+I just heard a camera shutter behind me. But I'm alone in the room. The camera is on the table across from me. It's pointing at me. And it just took another photo by itself.`,
                 tag: "📸 Cursed Objects"
             },
             {
                 title: "The Basement Door",
                 image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=400&h=220&fit=crop",
+                video: "https://cdn.coverr.co/videos/coverr-creepy-door-in-abandoned-building-7245/1080p.mp4",
                 preview: "My new house has a sealed door in the basement. Last night, I heard scratching...",
                 story: `When I moved into this old Victorian house, the realtor mentioned the basement door was sealed for "structural reasons." She said it was just an old coal chute that led nowhere. I believed her - until last night. I was working late when I heard it. Scratch. Scratch. Scratch. A slow, rhythmic sound coming from the basement. I went down to investigate, flashlight in hand. The sealed door was old, its wood darkened with age, covered with decades of paint and plaster. But as I approached, I saw something that made my blood run cold. Fresh scratch marks. Deep gouges in the wood, as if something with long claws was trying to get through from the other side. I pressed my ear against the door. Silence. Then, a whisper. "Let me out." The voice was old, raspy, desperate. "Please... I've been here so long." I stumbled backward, my flashlight revealing something else. Words carved into the door frame: "DO NOT OPEN. SEALED 1923. NEVER OPEN." Every night since, the scratching has gotten louder. More urgent. And tonight, I noticed something new. The door is starting to crack. The plaster around the hinges is crumbling. Whatever is behind that door is getting stronger.`,
                 tag: "🚪 Entities"
@@ -1002,8 +1082,11 @@
             horrorStories.forEach((story, index) => {
                 const card = document.createElement('div');
                 card.className = 'story-card';
+                
+                const mediaHtml = `<img src="${story.image}" alt="${story.title}" class="story-image" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&h=220&fit=crop'">`;
+                
                 card.innerHTML = `
-                    <img src="${story.image}" alt="${story.title}" class="story-image" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&h=220&fit=crop'">
+                    ${mediaHtml}
                     <div class="story-card-content">
                         <h3 class="story-title">${story.title}</h3>
                         <p class="story-preview">${story.preview}</p>
